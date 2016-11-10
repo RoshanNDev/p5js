@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+  var col; //these two are the color variables
+  var col1;
+        function setup() {
+            createCanvas(800,600);
+            col2 = 255;
+            col1 = 255;
+            col3 = 255;
+              
+               
+        }
+
+        function draw() {
+             fill(col1,col2, col3)
+             
+         
+           ellipse(mouseY,mouseX,100,100); // two ellipses are made one going woth x,y and other with y,x
+           ellipse(mouseX,mouseY,100,100);
+          rect(mouseX,mouseY,100,100); // a sqaure is made and follows x,y and is mixed with the arc and one of the ellipse
+           line(mouseY,mouseX,100,100); // two lines are created one following the x,y and one y,x
+           line(mouseX,mouseY,100,100);
+           arc(mouseX,mouseY,255, 50, 50,  QUARTER_PI); // this line of code makes a quater pi and it follows x,y
+             
+             
+        }
+        
+        function keyPressed(){    
+            //when any key is pressed the color changes of the shapes 
+            col1 = random(0,255)
+            col2 = random(0,255)
+            col3 = random(0,255)
+        }
+        
+        function mousePressed(){
+            //the backgrounds color changes when you click
+        background(random(0,255),random(0,255), random(0,255))
+            
+          
+        }
+    </script>
+</head>
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/USERNAME/p5js/blob/gh-pages/FILENAME.html?footer=0"></script>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/thewonderer123/p5js/blob/gh-pages/interaction-practice.html?footer=0"></script>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+
+
+</html>
